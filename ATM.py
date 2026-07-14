@@ -22,7 +22,7 @@ if pin in accounts:
     print("Welcome ",accounts[pin]["Name"])
 
 while True:
-    feature = int(input("Enter keys for selected options\n1 for check balance\n2 for depostis\n3 for withdraws\n4 to change PIN\n5 for mini statement\n6 to EXIT\n>"))
+    feature = int(input("Enter keys for selected options\n1 for check balance\n2 for deposits\n3 for withdrawal\n4 to change PIN\n5 for mini statement\n6 to EXIT\n>"))
 
     if feature == 1:
         print("Your Remaining balance is : Rs.",accounts[pin]["Balance"])
@@ -43,7 +43,7 @@ while True:
 
         if withdraw > 0 and withdraw < accounts[pin]["Balance"]:
             accounts[pin]["Balance"] -= withdraw
-            accounts[pin]["Transactions"].append(f"Withdraw Rs. {withdraw}")
+            accounts[pin]["Transactions"].append(f"Withdraws Rs. {withdraw}")
             print("Remaining balance is : Rs.",accounts[pin]["Balance"])
 
         else:
